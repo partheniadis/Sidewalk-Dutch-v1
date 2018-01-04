@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wearable.view.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="match_parent"
+    tools:context="com.partheniadisk.bliner.NavActivity"
+    tools:deviceIds="wear">
+
+
+
+
+
+
+    <TextView
+            android:id="@+id/clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="bottom|start"
+            android:textColor="@android:color/white"
+            app:layout_box="all" />
+
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/Stats"
+        android:textAlignment="center"
+        android:textColor="@color/colorSecondaryDark"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        app:layout_box="all" />
+
+    <TextView
+        android:id="@+id/Instruction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:textColor="@color/colorSecondaryDark"
+        android:text="1. Keep heading at 12 o'clock and walk for 3 meters past the door."
+        android:textSize="11sp"
+        android:textAlignment="center"
+        app:layout_box="all"
+        android:textStyle="bold"
+        />
+    <ImageView
+        android:id="@+id/arrowAim"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:paddingTop="90dp"
+        android:rotation="0"
+        android:tint="@color/colorPrimary"
+        android:src="@drawable/arrow"
+        android:visibility="visible" />
+
+    <android.support.wearable.view.DismissOverlayView
+        android:id="@+id/dismiss_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</android.support.wearable.view.BoxInsetLayout>

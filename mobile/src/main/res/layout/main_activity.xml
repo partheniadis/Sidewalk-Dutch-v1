@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+        <Button
+            android:id="@+id/start_wearable_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onStartWearableActivityClick"
+            android:text="@string/start_wearable_activity"
+            android:enabled="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="0dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skip current Decision Point (DP):"
+            android:gravity="center"
+            android:layout_below="@id/start_wearable_activity"
+            android:id="@+id/description"/>
+
+
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:text="@string/next_stage"
+            android:id="@+id/nextStage"
+            android:onClick="onNextStageClick"
+            android:visibility="visible"
+            android:enabled="false"
+            android:layout_below="@+id/description"
+            android:layout_alignParentEnd="true" />
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:text="@string/previous_stage"
+            android:id="@+id/previousStage"
+            android:enabled="false"
+            android:onClick="onPreviousStageClick"
+            android:visibility="visible"
+            android:layout_below="@+id/description"
+            android:layout_alignParentStart="true" />
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Instructions"
+        android:gravity="center"
+        android:layout_below="@id/nextStage"
+        android:id="@+id/instructions_text"/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:text="@string/current"
+            android:id="@+id/current"
+            android:enabled="true"
+            android:onClick="soundCurrentCheckpoint"
+            android:visibility="visible"
+            android:layout_below="@+id/instructions_text"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:text="@string/landmark"
+            android:id="@+id/landmarks"
+            android:enabled="true"
+            android:onClick="soundALandmark"
+            android:visibility="visible"
+            android:layout_below="@+id/current"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+    <View
+        style="@style/Divider"
+        android:id="@+id/divider"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+   <!-- <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@mipmap/ic_launcher"
+        android:layout_marginTop="125dp"
+        android:layout_below="@+id/divider"
+        android:layout_centerHorizontal="true">
+
+    </FrameLayout>-->
+
+    <ListView
+        android:id="@+id/data_item_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/divider"
+        android:visibility="gone"
+        android:transcriptMode="alwaysScroll" />
+</RelativeLayout>

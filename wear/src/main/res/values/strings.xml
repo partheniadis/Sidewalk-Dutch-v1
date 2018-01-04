@@ -1,0 +1,16 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Sidewalks</string>
+
+    <string name="StepCounter">0 Steps</string>
+    <string name="Instructions">Tap twice to start navigation.</string>
+    <string name="Stats">312°, NE, 310 Steps. </string>
+    <string name="title">Hello Notification!</string>
+    <string name="notification_posted">Notification posted</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="intro_text">Long click to exit the app.</string>
+    <string name="intro">Waiting for data to arrive\u2026</string>
+    <string name="capability_2_notification">Capability 2</string>
+    <string name="capabilities_1_and_2_notification">Capabilities 1 and 2</string>
+    <string name="no_device">No device provides the requested capabilities</string>
+    <string name="connected_nodes">Nodes: %1$s</string>
+</resources>

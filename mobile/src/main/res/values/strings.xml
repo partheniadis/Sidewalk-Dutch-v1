@@ -1,0 +1,13 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--<string name="app_name">Sidewalk</string>-->
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="start_wearable_activity">Start Smartwatch Navigation!</string>
+    <string name="start">Start</string>
+    <string name="take_photo">Take a Photo</string>
+    <string name="previous_stage">Previous</string>
+    <string name="next_stage">Next</string>
+    <string name="landmark">Sound a Landmark!</string>
+    <string name="current">Sound current instruction!</string>
+</resources>
